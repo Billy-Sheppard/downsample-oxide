@@ -1,0 +1,27 @@
+[package]
+name = "downsample-oxide"
+version = "0.1.0"
+edition = "2021"
+authors = ["Billy Sheppard"]
+license = "Apache-2.0"
+keywords = ["downsampling", "data", "lttb", "buckets", "charts"]
+categories = ["statistics", "charts", "data"]
+readme = "README.md"
+description = "Largest Triangle Three Buckets Implementation"
+repository = "https://github.com/Billy-Sheppard/downsample-oxide"
+homepage = "https://github.com/Billy-Sheppard/downsample-oxide"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust_decimal = "1.29.0"
+time_crate = {package = "time", version = "0.3.20", optional = true }
+chrono_crate = {package = "chrono", version = "0.4.24", optional = true }
+
+[dev-dependencies]
+chrono_crate = {package = "chrono", version = "0.4.24"}
+
+[features]
+time = ["time_crate"]
+chrono = ["chrono_crate"]
