@@ -1,6 +1,6 @@
 [package]
 name = "downsample-oxide"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Billy Sheppard"]
 license = "MIT"
@@ -16,11 +16,11 @@ homepage = "https://github.com/Billy-Sheppard/downsample-oxide"
 
 [dependencies]
 rust_decimal = "1.29.0"
-time_crate = {package = "time", version = "0.3.20", optional = true }
-chrono_crate = {package = "chrono", version = "0.4.24", optional = true }
+time_crate = { package = "time", version = "0.3.20", optional = true }
+chrono_crate = { package = "chrono", version = "0.4.24", optional = true }
 
 [dev-dependencies]
-chrono_crate = {package = "chrono", version = "0.4.24"}
+chrono_crate = { package = "chrono", version = "0.4.24" }
 
 [features]
 time = ["time_crate"]

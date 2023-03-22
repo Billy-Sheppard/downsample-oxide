@@ -80,7 +80,7 @@ impl From<DataPoint> for DataOutput {
     }
 }
 
-trait Lttb {
+pub trait Lttb {
     fn downsample(self, threshold: usize) -> Vec<DataOutput>;
 }
 impl Lttb for Vec<DataPoint> {

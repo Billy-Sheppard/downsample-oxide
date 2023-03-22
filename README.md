@@ -22,6 +22,15 @@ ___
 ## Example
 ``` rust
 use downsample_oxide::*;
+use chrono::*;
+
+fn first_day_of_month(month_num: u32) -> DateTime<Utc> {
+    NaiveDate::from_ymd_opt(2022, month_num, 1)
+        .unwrap()
+        .and_time(NaiveTime::default())
+        .and_local_timezone(Utc)
+        .unwrap()
+}
 
 fn main() {
     let dps = Vec::from([
@@ -32,6 +41,6 @@ fn main() {
         DataPoint::new(first_day_of_month(5), Decimal::from(12)),
     ]);
 
-    let output = dps.downsample(3)
+    let output = dps.downsample(3);
 }
 ```
